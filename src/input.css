@@ -16,13 +16,23 @@ body {
 }
 
 .tab:not(.active):hover {
-    @apply bg-slate-800 rounded-t-md;
+    @apply bg-slate-800;
 }
 
-.tag {
+outer-tag {
+    @apply pl-2;
+}
+
+inner-tag {
+    @apply pl-9;
+}
+
+outer-tag span,
+inner-tag span,
+ending-tag span {
     @apply text-pink-500;
 }
 
-.code-text {
+text-content {
     @apply text-gray-300 text-base;
 }

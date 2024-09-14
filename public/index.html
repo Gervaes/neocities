@@ -9,47 +9,21 @@
 </head>
 
 <body class="h-screen flex items-center justify-center font-mono">
-    <div class="m-4 w-[48rem] min-w-[33rem] bg-slate-900 rounded-2xl shadow-md shadow-teal-400">
+    <div class="m-4 w-[48rem] min-w-[33rem] bg-slate-900 shadow-md shadow-teal-400">
         <div class="flex text-sm pt-1">
             <div class="tab active">home.html</div>
             <div class="tab">about_me.html</div>
             <div class="tab">projects.html</div>
         </div>
-        <div class="border-t-2 p-3 border-t-slate-800 rounded-b-3xl text-gray-400 font-semibold text-sm leading-6">
-            <line>
-                1
-                <span class="pl-2">&lt;<span class="tag">header</span>&gt;</span>
-            </line>
-            </br>
-            <line>
-                2
-                <span class="pl-9">&lt;<span class="tag">h1</span>&gt;</span>
-                <span class="code-text">👋 Welcome to my corner of the internet!</span>
-                <span>&lt;/<span class="tag">h1</span>&gt;</span>
-            </line>
-            </br>
-            <line>
-                3
-                <span class="pl-2">&lt;/<span class="tag">header</span>&gt;</span>
-            </line>
-            </br>
-            <line>
-                4
-                <span class="pl-2">&lt;<span class="tag">body</span>&gt;</span>
-            </line>
-            </br>
-            <line>
-                5
-                <span class="pl-9">&lt;<span class="tag">span</span>&gt;</span>
-                <span class="code-text">🚧 Currently under construction <span
-                        class="animate-[pulse_1s_linear_infinite]">⚠️</span></span>
-                <span>&lt;/<span class="tag">span</span>&gt;</span>
-            </line>
-            </br>
-            <line>
-                6
-                <span class="pl-2">&lt;/<span class="tag">body</span>&gt;</span>
-            </line>
+        <div class="border-t-2 p-3 border-t-slate-800 text-gray-400 font-semibold text-sm leading-6">
+            <pre>
+1   <outer-tag>&lt;<span>header</span>&gt;</outer-tag>
+2   <inner-tag>&lt;<span>h1</span>&gt;</inner-tag><text-content> 👋 Welcome to my corner of the internet!</text-content> <ending-tag>&lt;/<span>h1</span>&gt;</ending-tag>
+3   <outer-tag>&lt;/<span>header</span>&gt;</outer-tag>
+4   <outer-tag>&lt;<span>body</span>&gt;</outer-tag>
+5   <inner-tag>&lt;<span>span</span>&gt;</inner-tag> <text-content>🚧 Currently under construction <span class="animate-[pulse_1s_linear_infinite]">⚠️</span></text-content> <ending-tag>&lt;/<span>span</span>&gt;</ending-tag>
+6   <outer-tag>&lt;/<span>body</span>&gt;</outer-tag>
+7   </pre>
         </div>
         <div class="h-6 border-t-2 border-t-slate-800"></div>
     </div>
