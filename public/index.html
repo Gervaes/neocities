@@ -9,14 +9,33 @@
     <title>gerv.neocities.org</title>
 </head>
 
+<script>
+    function selectTab(e) {
+        let tabs = document.getElementsByClassName("tab");
+        let tabContents = document.getElementsByClassName("tab-content");
+
+        let activeIndex = e.currentTarget.getAttribute("index")
+
+        for (let index = 0; index < tabs.length; index++) {
+            if (index == activeIndex) {
+                tabContents[index].style.display = "block";
+                e.currentTarget.className += " active";
+            } else {
+                tabContents[index].style.display = "none";
+                tabs[index].className = tabs[index].className.replace(" active", "");
+            }
+        }
+    }
+</script>
+
 <body class="h-screen flex items-center justify-center font-mono">
     <div class="m-4 w-[48rem] min-w-[33rem] bg-slate-900 shadow-md shadow-teal-400">
         <div class="flex text-sm pt-1">
-            <div class="tab active">home.html</div>
-            <div class="tab">about_me.html</div>
-            <div class="tab">projects.html</div>
+            <button class="tab active" onclick="selectTab(event)" index="0">home.html</button>
+            <button class="tab" onclick="selectTab(event)" index="1">about_me.html</button>
+            <button class="tab" onclick="selectTab(event)" index="2">projects.html</button>
         </div>
-        <div class="border-t-2 p-3 border-t-slate-800 text-gray-400 font-semibold text-sm leading-6">
+        <div class="tab-content">
             <pre>
 1   <outer-tag>&lt;<span>header</span>&gt;</outer-tag>
 2   <inner-tag>&lt;<span>h1</span>&gt;</inner-tag><text-content> 👋 Welcome to my corner of the internet!</text-content> <ending-tag>&lt;/<span>h1</span>&gt;</ending-tag>
@@ -25,6 +44,10 @@
 5   <inner-tag>&lt;<span>span</span>&gt;</inner-tag> <text-content>🚧 Currently under construction <span class="animate-[pulse_1s_linear_infinite]">⚠️</span></text-content> <ending-tag>&lt;/<span>span</span>&gt;</ending-tag>
 6   <outer-tag>&lt;/<span>body</span>&gt;</outer-tag>
 7   </pre>
+        </div>
+        <div class="tab-content hidden">
+        </div>
+        <div class="tab-content hidden">
         </div>
         <div class="h-6 border-t-2 border-t-slate-800"></div>
     </div>
