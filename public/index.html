@@ -19,7 +19,8 @@
         for (let index = 0; index < tabs.length; index++) {
             if (index == activeIndex) {
                 tabContents[index].style.display = "block";
-                e.currentTarget.className += " active";
+                if (!e.currentTarget.className.includes("active"))
+                    e.currentTarget.className += " active";
             } else {
                 tabContents[index].style.display = "none";
                 tabs[index].className = tabs[index].className.replace(" active", "");
