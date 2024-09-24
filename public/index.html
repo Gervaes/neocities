@@ -33,8 +33,8 @@
     <div class="m-4 w-[48rem] min-w-[33rem] bg-slate-900 shadow-md shadow-teal-400">
         <div class="flex text-sm pt-1">
             <button class="tab active" onclick="selectTab(event)" index="0">home.html</button>
-            <button class="tab" onclick="selectTab(event)" index="1">about_me.html</button>
-            <button class="tab" onclick="selectTab(event)" index="2">projects.html</button>
+            <button class="tab" onclick="selectTab(event)" index="1">time_to_lowball.py</button>
+            <!-- <button class="tab" onclick="selectTab(event)" index="2">projects.html</button> -->
         </div>
         <div class="tab-content">
             <pre>
@@ -58,6 +58,24 @@
 18  <span class="animate-[pulse_0.9s_linear_infinite]">|</span></pre>
         </div>
         <div class="tab-content hidden">
+            <pre>
+1   <span class="text-white"><span class="text-pink-500">import</span> webbrowser</span>
+2   <span class="text-white"><span class="text-pink-500">import</span> urllib.parse</span>
+3
+4   <span class="text-white"><span class="text-blue-500">def</span> <span class="text-yellow-200">open_search</span><span class="text-yellow-400">(</span><span class="text-teal-300">url</span><span class="text-yellow-400">)</span>:</span>
+5       <span class="text-white">webbrowser.open<span class="text-yellow-400">(</span>url, <span class="text-teal-300">new</span>=2<span class="text-yellow-400">)</span></span>
+6
+7   <span class="text-white"><span class="text-blue-500">def</span> <span class="text-yellow-200">main</span><span class="text-yellow-400">()</span>:</span>
+8       <span class="text-white">bdm = <span class="text-yellow-400">[</span><span class="text-amber-700 font-extrabold">"vw brasilia"<span class="text-white">,</span> "corcel I"<span class="text-white">,</span> "chevette tubarão"<span class="text-white">,</span> "uno cabeçudo"</span><span class="text-yellow-400">]</span></span>
+9       <span class="text-white">jdm = <span class="text-yellow-400">[</span><span class="text-amber-700 font-extrabold">"nissan 350z"<span class="text-white">,</span> "mitsubishi eclipse"<span class="text-white">,</span> "honda civic 92"<span class="text-white">,</span> "subaru impreza"</span><span class="text-yellow-400">]</span></span>
+10
+11      <span class="text-white">url = <span class="text-amber-700 font-extrabold">"https://www.facebook.com/marketplace/search?query="</span></span>
+12
+13      <span class="text-white"><span class="text-pink-500">for</span> car <span class="text-pink-500">in</span> bdm + jdm:</span>
+14          <span class="text-white">open_search<span class="text-yellow-400">(</span>url + urllib.parse.quote<span class="text-pink-500">(</span>car<span class="text-pink-500">)</span><span class="text-yellow-400">)</span></span>
+15            
+16  <span class="text-white">main</span><span class="text-yellow-400">()</span>
+17</pre>
         </div>
         <div class="tab-content hidden">
         </div>
