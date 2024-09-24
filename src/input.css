@@ -47,5 +47,14 @@ ending-tag span {
 }
 
 text-content {
-    @apply text-gray-300 text-base;
+    @apply text-gray-300;
+}
+
+text-content.title {
+    @apply text-base;
+}
+
+text-content.paragraph,
+text-content.listitem {
+    @apply font-light;
 }

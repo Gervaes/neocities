@@ -596,6 +596,16 @@ video {
   animation: pulse 1s linear infinite;
 }
 
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-\[pulse_0\.9s_linear_infinite\] {
+  animation: pulse 0.9s linear infinite;
+}
+
 .items-center {
   align-items: center;
 }
@@ -722,8 +732,16 @@ ending-tag span {
 }
 
 text-content {
-  font-size: 1rem;
-  line-height: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+text-content.title {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+text-content.paragraph,
+text-content.listitem {
+  font-weight: 300;
 }
