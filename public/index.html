@@ -9,78 +9,7 @@
     <title>gerv.neocities.org</title>
 </head>
 
-<script>
-    function selectTab(e) {
-        let tabs = document.getElementsByClassName("tab");
-        let tabContents = document.getElementsByClassName("tab-content");
-
-        let activeIndex = e.currentTarget.getAttribute("index")
-
-        for (let index = 0; index < tabs.length; index++) {
-            if (index == activeIndex) {
-                tabContents[index].style.display = "block";
-                if (!e.currentTarget.className.includes("active"))
-                    e.currentTarget.className += " active";
-            } else {
-                tabContents[index].style.display = "none";
-                tabs[index].className = tabs[index].className.replace(" active", "");
-            }
-        }
-    }
-</script>
-
-<body class="h-screen flex items-center justify-center font-mono">
-    <div class="m-4 w-[48rem] min-w-[33rem] bg-slate-900 shadow-md shadow-teal-400">
-        <div class="flex text-sm pt-1">
-            <button class="tab active" onclick="selectTab(event)" index="0">home.html</button>
-            <button class="tab" onclick="selectTab(event)" index="1">time_to_lowball.py</button>
-            <!-- <button class="tab" onclick="selectTab(event)" index="2">projects.html</button> -->
-        </div>
-        <div class="tab-content">
-            <pre>
-1   <outer-tag>&lt;<span>header</span>&gt;</outer-tag>
-2   <inner-tag>&lt;<span>h1</span>&gt;</inner-tag><text-content class="title"> 👋 welcome to my corner of the internet!</text-content> <ending-tag>&lt;/<span>h1</span>&gt;</ending-tag>
-3   <outer-tag>&lt;/<span>header</span>&gt;</outer-tag>
-4   <outer-tag>&lt;<span>body</span>&gt;</outer-tag>
-5   <inner-tag>&lt;<span>h2</span>&gt;</inner-tag> <text-content class="title">about me and all of this</text-content> <ending-tag>&lt;/<span>h2</span>&gt;</ending-tag>
-6   <inner-tag>&lt;<span>ul</span>&gt;</inner-tag>
-7       <inner-tag>&lt;<span>li</span>&gt;</inner-tag> <text-content class="paragraph">gerv</text-content> <ending-tag>&lt;/<span>li</span>&gt;</ending-tag>
-8       <inner-tag>&lt;<span>li</span>&gt;</inner-tag> <text-content class="paragraph">he/him</text-content> <ending-tag>&lt;/<span>li</span>&gt;</ending-tag>
-9       <inner-tag>&lt;<span>li</span>&gt;</inner-tag> <text-content class="paragraph">brazilian, programmer, santos f.c. supporter, introvert</text-content> <ending-tag>&lt;/<span>li</span>&gt;</ending-tag>
-10  <inner-tag>&lt;<span>ul</span>&gt;</inner-tag>
-11  <inner-tag>&lt;<span>p</span>&gt;</inner-tag>
-12          <text-content class="paragraph">hi, I'm Gerv. I don't love many things right now, but I'll try and display here</text-content>
-13          <text-content class="paragraph">some of the ones I do, while using the oportunity to try some new things about</text-content>
-14          <text-content class="paragraph">programming (one of the things I do love). so, welcome and thanks for stoping by.</text-content>
-15          <text-content class="paragraph">🤙🏻</text-content>
-16  <inner-tag>&lt;/<span>p</span>&gt;</inner-tag>
-17  <outer-tag>&lt;/<span>body</span>&gt;</outer-tag>
-18  <span class="animate-[pulse_0.9s_linear_infinite]">|</span></pre>
-        </div>
-        <div class="tab-content hidden">
-            <pre>
-1   <span class="text-white"><span class="text-pink-500">import</span> webbrowser</span>
-2   <span class="text-white"><span class="text-pink-500">import</span> urllib.parse</span>
-3
-4   <span class="text-white"><span class="text-blue-500">def</span> <span class="text-yellow-200">open_search</span><span class="text-yellow-400">(</span><span class="text-teal-300">url</span><span class="text-yellow-400">)</span>:</span>
-5       <span class="text-white">webbrowser.open<span class="text-yellow-400">(</span>url, <span class="text-teal-300">new</span>=2<span class="text-yellow-400">)</span></span>
-6
-7   <span class="text-white"><span class="text-blue-500">def</span> <span class="text-yellow-200">main</span><span class="text-yellow-400">()</span>:</span>
-8       <span class="text-white">bdm = <span class="text-yellow-400">[</span><span class="text-amber-700 font-extrabold">"vw brasilia"<span class="text-white">,</span> "corcel I"<span class="text-white">,</span> "chevette tubarão"<span class="text-white">,</span> "uno cabeçudo"</span><span class="text-yellow-400">]</span></span>
-9       <span class="text-white">jdm = <span class="text-yellow-400">[</span><span class="text-amber-700 font-extrabold">"nissan 350z"<span class="text-white">,</span> "mitsubishi eclipse"<span class="text-white">,</span> "honda civic 92"<span class="text-white">,</span> "subaru impreza"</span><span class="text-yellow-400">]</span></span>
-10
-11      <span class="text-white">url = <span class="text-amber-700 font-extrabold">"https://www.facebook.com/marketplace/search?query="</span></span>
-12
-13      <span class="text-white"><span class="text-pink-500">for</span> car <span class="text-pink-500">in</span> bdm + jdm:</span>
-14          <span class="text-white">open_search<span class="text-yellow-400">(</span>url + urllib.parse.quote<span class="text-pink-500">(</span>car<span class="text-pink-500">)</span><span class="text-yellow-400">)</span></span>
-15            
-16  <span class="text-white">main</span><span class="text-yellow-400">()</span>
-17</pre>
-        </div>
-        <div class="tab-content hidden">
-        </div>
-        <div class="h-6 border-t-2 border-t-slate-800"></div>
-    </div>
+<body>
 </body>
 
 </html>
