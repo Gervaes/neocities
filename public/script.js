@@ -5,7 +5,7 @@ let vehicle = {
     location: 'São José do Rio Preto, SP',
     situation: 'Doc em Dia Recibo em Branco',
     price: 15000,
-    description: 'Brasilia 79/79 Doc em Dia Recibo em Branco4 Pneus novos Bateria Nova.',
+    description: 'Brasilia 79/79 Doc em Dia Recibo em Branco 4 Pneus novos Bateria Nova.',
 }
 
 let game = null;
@@ -48,7 +48,8 @@ fillVehicleDetails = () => {
 
 handleGuess = () => {
     const guessInput = document.getElementById('guess-input');
-    const guessButton = document.getElementsByClassName('guess-button');
+    const guessButton = document.querySelector('.guess-button');
+    const guessCounter = document.querySelector('.guess-counter');
     const guessValue = parseFloat(guessInput.value);
 
     if (isNaN(guessValue)) return;
@@ -62,6 +63,7 @@ handleGuess = () => {
     updateGame(newGuess);
 
     guessInput.value = '';
+    guessCounter.textContent = `${game.guess}/${game.maxGuesses}`;
     guessInput.disabled = game.isGameOver;
     guessButton.disabled = game.isGameOver;
     guessInput.placeholder = game.isGameOver ? 'Jogo terminado' : 'Quanto custa?';
