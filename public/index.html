@@ -50,7 +50,7 @@
             </div>
             <div class="guess-section">
                 <div class="past-guesses"></div>
-                <form class="guess-form">
+                <form class="guess-form" onkeydown="return event.key != 'Enter';">
                     <input type="number" min="0" step="0.01" id="guess-input" placeholder="Quanto custa?" class="guess-input">
                     <button type="button" onclick="handleGuess()" class="guess-button">Chutar</button>
                 </form>

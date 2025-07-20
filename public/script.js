@@ -124,4 +124,12 @@ renderGuesses = () => {
     });
 }
 
+onkeydown = (event) => {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        handleGuess();
+    }
+}
+
 fillVehicleDetails();
+addEventListener("keydown", (event) => { })
