@@ -6,10 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
     <title>gerv.neocities.org</title>
 </head>
 
 <body>
+    <div class="listing-card">
+        <div class="header">
+            <span>bruxdle</span>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="image">
+                    <img src="https://scontent.fsjp4-1.fna.fbcdn.net/v/t39.30808-6/495595319_24027162290249553_5441342131970348960_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=454cf4&_nc_eui2=AeF-bPklr5mNk9-XS96Q2QqxOCLNpy3sS0A4Is2nLexLQIzCDWCwlZsvgwCC1F3_hDp08hLgCc7dgP48oqGKhDlI&_nc_ohc=GQ_8bNxlM3cQ7kNvwECmqqf&_nc_oc=AdmOAi1JqA9llM2zuldqc57vQZBvsjqKb0GE8d-SAAYbAz5HENI-2vr1I6H7YnIOE016O_pARIIbrLSgbjOd2-Dt&_nc_zt=23&_nc_ht=scontent.fsjp4-1.fna&_nc_gid=B81ZxadVoCv3NbK8BTLMjw&oh=00_AfRGkbi9028i-ae7597b8zl95Kfyuj-EI3fVkgoL1UeQmA&oe=6883384F" alt="">
+                </div>
+                <div class="info">
+                    <div class="km">
+                        <span class="label">km</span>
+                        <span class="value"></span>
+                    </div>
+                    <div class="year">
+                        <span class="label">ano</span>
+                        <span class="value"></span>
+                    </div>
+                    <div class="location">
+                        <span class="label">onde</span>
+                        <span class="value"></span>
+                    </div>
+                    <div class="situation">
+                        <span class="label">situação</span>
+                        <span class="value"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="title-section">
+                <span class="title"></span>
+                <div class="listing-description">
+                    <span class="label">descrição</span>
+                    <span class="value"></span>
+                </div>
+            </div>
+            <div class="guess-section">
+                <div class="past-guesses"></div>
+                <form class="guess-form">
+                    <input type="number" min="0" step="0.01" id="guess-input" placeholder="Quanto custa?" class="guess-input">
+                    <button type="button" onclick="handleGuess()" class="guess-button">Chutar</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
-
+<script src="script.js"></script>
 </html>
