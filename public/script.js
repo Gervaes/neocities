@@ -65,6 +65,7 @@ handleGuess = () => {
     guessInput.disabled = game.isGameOver;
     guessButton.disabled = game.isGameOver;
     guessInput.placeholder = game.isGameOver ? 'Jogo terminado' : 'Quanto custa?';
+    guessInput.focus();
 }
 
 updateGame = (newGuess) => {
