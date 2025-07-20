@@ -29,6 +29,7 @@ fillVehicleDetails = () => {
     let locationElement = document.querySelector('.location .value');
     let situationElement = document.querySelector('.situation .value');
     let descriptionElement = document.querySelector('.listing-description .value');
+    let priceElement = document.querySelector('.price');
 
     titleElement.textContent = vehicle.title;
     kmElement.textContent = vehicle.km;
@@ -36,12 +37,14 @@ fillVehicleDetails = () => {
     locationElement.textContent = vehicle.location;
     situationElement.textContent = vehicle.situation;
     descriptionElement.textContent = vehicle.description;
+    priceElement.textContent = `R$ ${vehicle.price.toFixed(2)}`;
 
     kmElement.classList.add('blur');
     yearElement.classList.add('blur');
     locationElement.classList.add('blur');
     situationElement.classList.add('blur');
     descriptionElement.classList.add('blur');
+    priceElement.classList.add('blur');
 
     initGame();
 }
@@ -76,6 +79,7 @@ updateGame = (newGuess) => {
     let locationElement = document.querySelector('.location .value');
     let situationElement = document.querySelector('.situation .value');
     let descriptionElement = document.querySelector('.listing-description .value');
+    let priceElement = document.querySelector('.price');
 
     if (newGuess.situation != 'correct') {
         switch (game.guess) {
@@ -94,6 +98,9 @@ updateGame = (newGuess) => {
             case 4:
                 descriptionElement.classList.remove('blur');
                 break;
+            case 5:
+                priceElement.classList.remove('blur');
+                break;
             default:
                 break;
         }
@@ -109,6 +116,7 @@ updateGame = (newGuess) => {
         locationElement.classList.remove('blur');
         situationElement.classList.remove('blur');
         descriptionElement.classList.remove('blur');
+        priceElement.classList.remove('blur');
     }
 
     renderGuesses();
